@@ -1,0 +1,13 @@
+name: Clean Cache
+
+on:
+  workflow_dispatch:
+
+jobs:
+  clean:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clean caches
+        run: |
+          rm -rf ~/.gradle/caches/
+          rm -rf ~/.cache/gradle/
